@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+
+    
+}
+
+header {
+    background-color: #FFD700;
+    width: 100%;
+    padding: 10px 20px;
+    position: flex; 
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex; 
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%; /* Ajusta a largura para ocupar o espaço disponível */
+}
+    
+
+
+.logo img{
+    width: 200px;
+    cursor: auto;
+    cursor: pointer;
+    
+
+}
+
+.fotos img{
+    width: 10px;
+    cursor: auto;
+    justify-content: right;
+}
+
+
+/* Ajuste da barra de menu */
+.menu {
+    width: auto; /* Deixe a largura do menu se ajustar ao conteúdo */
+    display: flex;
+    margin-right: 100px; 
+    justify-content: right;
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+.menu nav a {
+    color: #000;
+    text-decoration: none;
+    padding-right: 20px; /* Diminui o espaço entre os links */
+    font-size: 16px; /* Ajusta o tamanho da fonte para um valor mais compacto */
+    position: right;
+}
+
+.menu nav a:last-child {
+    padding-right: 0; /* Remove o padding do último item para não dar margem extra */
+}
+
+
+.menu nav a::after{
+    content: " ";
+    width: 30px;
+    height: 4px;
+    background-image: linear-gradient(45deg, #ffe753);
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+}
+
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    height: 100vh;
+    background-color: #e8f1f3;
+    display: flex;
+    flex-direction: column; 
+}
+
+.perguntas-frequentes {
+    width: 1000px;
+    margin: 100px auto 0; 
+    padding: 20px;
+}
+
+.perguntas-frequentes h1 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.faq {
+    width: 100%;
+    list-style: none;
+}
+
+.faq li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.faq li label {
+    padding: 15px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #FFD700;
+    color: #ff0000; 
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px; 
+    transition: background-color 0.3s;
+}
+
+.faq li label:hover {
+    background-color: #FFD700; 
+}
+
+.faq li label span {
+    display: inline-block;
+    padding: 8px;
+    color: #000000;
+    background-color: #000000;
+    color: #ffe753;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.faq li label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.faq input[type=radio] {
+    display: none;
+}
+
+.faq .resposta {
+  display: flex;
+  color: #000000;
+  padding: 0 14px;
+  background-color: #fff;
+  line-height: 32px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+  border-radius: 8px;
+}
+
+
+.faq .txt-resposta {
+  width: 60%;
+  padding: 10px;
+}
+
+.faq .img-resposta {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq .img-resposta img {
+  width: 40%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.faq input[type=radio]:checked + label + .resposta {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.faq input[type=radio]:checked + label span {
+    background-color: #000000;
+}
+
+.faq input[type=radio]:checked + label::before {
+    content: '-';
+}
+.div-video {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+
+iframe {
+    max-width: 100%; 
+    height: auto;
+}
+@media (max-width: 1080px) {
+    .container {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Espaço entre o logo e o menu */
+    }
+
+    .menu nav a {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        padding-right: 10px; /* Menor espaçamento entre os links */
+    }
+
+    .perguntas-frequentes {
+        width: 90%; /* Reduz a largura da seção de perguntas */
+    }
+
+    .faq label {
+        font-size: 16px; /* Ajusta o tamanho do texto das perguntas */
+    }
+
+    iframe {
+        width: 100%; /* Torna o vídeo responsivo */
+        height: auto;
+    }
+}
+
+/* Para telas menores que 768px (smartphones grandes e tablets) */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Alinha os links em coluna */
+    }
+
+    .menu nav a {
+        margin-bottom: 10px; /* Espaço entre os links */
+        font-size: 12px; /* Tamanho menor da fonte */
+    }
+
+    .faq .resposta {
+        font-size: 14px; /* Reduz o tamanho do texto das respostas */
+    }
+
+    .perguntas-frequentes h1 {
+        font-size: 2rem; /* Ajusta o tamanho do título */
+    }
+}
+
+/* Para telas menores que 480px (smartphones pequenos) */
+@media (max-width: 480px) {
+    .logo img {
+        width: 120px; /* Reduz o tamanho do logo */
+    }
+
+    .menu nav a {
+        font-size: 10px; /* Texto menor nos links */
+    }
+
+    .faq label {
+        font-size: 14px; /* Texto menor nas perguntas */
+    }
+
+    .faq .resposta {
+        font-size: 12px; /* Texto menor nas respostas */
+    }
+
+    .div-video {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+    }
+}
+
+.botao-eu-quero {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.botao-eu-quero button {
+    background-color: #808080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-eu-quero button:hover {
+    background-color: #ff0000;
+}
