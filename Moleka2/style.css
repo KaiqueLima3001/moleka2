@@ -302,3 +302,68 @@ iframe {
 .botao-eu-quero button:hover {
     background-color: #ff0000;
 }
+
+.quantidade-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.quantidade-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #FFD700;*/
+    border-radius: 999px;
+    padding: 4px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 36px;
+}
+
+.qty-btn {
+    background-color: #000000;
+    color: #FFD700;
+    border: none;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.qty-btn:hover {
+    background-color: #ff0000;
+}
+
+.qty-number {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    min-width: 20px;
+    text-align: center;
+}
+
+.finalizar-btn {
+    background-color: #808080;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.finalizar-btn:hover {
+    background-color: #ff0000;
+}
+
